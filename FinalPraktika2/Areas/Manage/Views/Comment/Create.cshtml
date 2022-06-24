@@ -1,0 +1,38 @@
+﻿@model Comment
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container-fluid">
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="UserName">UserName</label>
+                <input asp-for="UserName" class="form-control" placeholder="UserName">
+            </div>
+             <div class="form-group col-md-6">
+                <label asp-for="Founder">Founder</label>
+                <input asp-for="Founder" class="form-control" placeholder="Founder">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label asp-for="FeedBack">FeedBack</label>
+                <input asp-for="FeedBack" class="form-control" placeholder="FeedBack">
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="Raiting">Raiting</label>
+                <input asp-for="Raiting" class="form-control" placeholder="Raiting">
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="Photo">Image</label>
+                <input asp-for="Photo" type="file" class="form-control" placeholder="Image">
+            </div>
+        </div>
+        <div class="form-group">
+            <button asp-controller="Comment" asp-action="Create" type="submit" class="btn btn-primary">Create</button>
+            <button asp-controller="Comment" asp-action="Index" class="btn btn-md rounded font-sm hover-up btn-primary">Go Back</button>
+
+        </div>
+    </form>
+</div>
+
